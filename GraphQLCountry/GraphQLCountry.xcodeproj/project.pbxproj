@@ -8,12 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9555217B2C4A755D005A1573 /* GraphQLCountryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9555217A2C4A755D005A1573 /* GraphQLCountryApp.swift */; };
-		9555217D2C4A755D005A1573 /* SpecificCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9555217C2C4A755D005A1573 /* SpecificCountryView.swift */; };
 		9555217F2C4A755E005A1573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9555217E2C4A755E005A1573 /* Assets.xcassets */; };
 		955521822C4A755E005A1573 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 955521812C4A755E005A1573 /* Preview Assets.xcassets */; };
 		955521962C4A763C005A1573 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955521952C4A763C005A1573 /* Network.swift */; };
-		9555219B2C4A7693005A1573 /* SpecificCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9555219A2C4A7693005A1573 /* SpecificCountryViewModel.swift */; };
-		955521B12C4A8C73005A1573 /* SpecificCountryQuery.graphql in Sources */ = {isa = PBXBuildFile; fileRef = 955521B02C4A8C73005A1573 /* SpecificCountryQuery.graphql */; };
 		955521B72C4AB2F0005A1573 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 955521B62C4AB2F0005A1573 /* Apollo */; };
 		955521B92C4AB2F0005A1573 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 955521B82C4AB2F0005A1573 /* ApolloWebSocket */; };
 		955521BB2C4ABAEC005A1573 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 955521BA2C4ABAEC005A1573 /* schema.graphqls */; };
@@ -27,12 +24,9 @@
 /* Begin PBXFileReference section */
 		955521772C4A755D005A1573 /* GraphQLCountry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphQLCountry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9555217A2C4A755D005A1573 /* GraphQLCountryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLCountryApp.swift; sourceTree = "<group>"; };
-		9555217C2C4A755D005A1573 /* SpecificCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificCountryView.swift; sourceTree = "<group>"; };
 		9555217E2C4A755E005A1573 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		955521812C4A755E005A1573 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		955521952C4A763C005A1573 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		9555219A2C4A7693005A1573 /* SpecificCountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificCountryViewModel.swift; sourceTree = "<group>"; };
-		955521B02C4A8C73005A1573 /* SpecificCountryQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = SpecificCountryQuery.graphql; sourceTree = "<group>"; };
 		955521BA2C4ABAEC005A1573 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = schema.graphqls; path = graphql/schema.graphqls; sourceTree = SOURCE_ROOT; };
 		955521BF2C4ABEBD005A1573 /* Countries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Countries.graphql; sourceTree = "<group>"; };
 		955521C62C4ABFFD005A1573 /* CountriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListView.swift; sourceTree = "<group>"; };
@@ -111,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				955521C52C4ABFEB005A1573 /* CountriesListView */,
-				955521C42C4ABFB7005A1573 /* SpecificCountryView */,
 			);
 			path = Frontend;
 			sourceTree = "<group>";
@@ -136,19 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				955521BA2C4ABAEC005A1573 /* schema.graphqls */,
-				955521B02C4A8C73005A1573 /* SpecificCountryQuery.graphql */,
 				955521BF2C4ABEBD005A1573 /* Countries.graphql */,
 			);
 			path = graphql;
-			sourceTree = "<group>";
-		};
-		955521C42C4ABFB7005A1573 /* SpecificCountryView */ = {
-			isa = PBXGroup;
-			children = (
-				9555217C2C4A755D005A1573 /* SpecificCountryView.swift */,
-				9555219A2C4A7693005A1573 /* SpecificCountryViewModel.swift */,
-			);
-			path = SpecificCountryView;
 			sourceTree = "<group>";
 		};
 		955521C52C4ABFEB005A1573 /* CountriesListView */ = {
@@ -242,12 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9555219B2C4A7693005A1573 /* SpecificCountryViewModel.swift in Sources */,
 				955521C72C4ABFFD005A1573 /* CountriesListView.swift in Sources */,
-				9555217D2C4A755D005A1573 /* SpecificCountryView.swift in Sources */,
 				955521CB2C4ADE21005A1573 /* CountryView.swift in Sources */,
 				955521C92C4AC014005A1573 /* CountriesListViewModel.swift in Sources */,
-				955521B12C4A8C73005A1573 /* SpecificCountryQuery.graphql in Sources */,
 				9555217B2C4A755D005A1573 /* GraphQLCountryApp.swift in Sources */,
 				955521962C4A763C005A1573 /* Network.swift in Sources */,
 			);
