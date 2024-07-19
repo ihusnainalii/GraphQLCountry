@@ -1,0 +1,10 @@
+query SpecificCountry {
+    country(code: "PK") {
+        name,
+        code,
+        capital,
+        currencies
+        emoji
+    }
+}
+
