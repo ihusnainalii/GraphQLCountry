@@ -2,7 +2,7 @@
 //  GraphQLCountryApp.swift
 //  GraphQLCountry
 //
-//  Created by Husnain Ali - ILI on 19/07/2024.
+//  Created by Husnain Ali on 19/07/2024.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct GraphQLCountryApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CountriesListView(viewModel: .init())
         }
     }
 }

@@ -1,0 +1,9 @@
+query GetAllCountries {
+  countries {
+    name,
+    code,
+    capital,
+    currencies
+    emoji
+  }
+}
