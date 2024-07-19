@@ -6,33 +6,48 @@
 //
 
 import SwiftUI
+import CountryApi
 
 struct CountriesListView: View {
     
     @StateObject var viewModel: CountriesListViewModel
     
     var body: some View {
-        VStack {
-            if viewModel.isLoading {
-                ProgressView("Loading...")
-            } else if let errorMessage = viewModel.errorMessage {
-                Text("Error: \(errorMessage)")
-                    .foregroundColor(.red)
-                    .multilineTextAlignment(.center)
-            } else if let countries = viewModel.countries {
-                List(countries, id: \.code) { country in
-                    VStack(alignment: .leading) {
-                        Text(country.name)
-                            .font(.headline)
-                        Text("Code: \(country.code)")
-                        Text("Capital: \(country.capital ?? "N/A")")
-                        Text("Currencies: \(country.currencies.joined(separator: ", "))")
+        NavigationStack {
+            VStack {
+                if viewModel.isLoading {
+                    ProgressView("Loading...")
+                } else if let errorMessage = viewModel.errorMessage {
+                    Text("Error: \(errorMessage)")
+                        .foregroundColor(.red)
+                        .multilineTextAlignment(.center)
+                } else if let countries = viewModel.searchedCountries {
+                    TextField("Search Country...", text: $viewModel.searchQuery)
+                        .padding()
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                        .padding(.horizontal)
+                    
+                    List(countries, id: \.code) { country in
+                        NavigationLink(destination: CountryView(country: country)) {
+                            HStack {
+                                Text(country.emoji)
+                                Text(country.name)
+                                Spacer()
+                            }
+                        }
                     }
                 }
             }
-        }
-        .onAppear {
-            viewModel.fetchCountries()
+            .onChange(of: viewModel.searchQuery, { oldValue, newValue in
+                print("newValue \(newValue)")
+                viewModel.filterCountries()
+            })
+            .task {
+                viewModel.fetchCountries()
+            }
+            .navigationTitle("Countries")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

@@ -13,8 +13,10 @@ import CountryApi
 class CountriesListViewModel: ObservableObject {
     
     @Published var countries: [GetAllCountriesQuery.Data.Country]?
+    @Published var searchedCountries: [GetAllCountriesQuery.Data.Country]?
     @Published var isLoading = false
     @Published var errorMessage: String?
+    @Published var searchQuery: String = ""
     
     func fetchCountries() {
         isLoading = true
@@ -26,6 +28,7 @@ class CountriesListViewModel: ObservableObject {
                 case .success(let graphQLResult):
                     if let countries = graphQLResult.data?.countries {
                         self?.countries = countries
+                        self?.searchedCountries = countries
                     } else if let errors = graphQLResult.errors {
                         self?.errorMessage = errors.map { $0.localizedDescription }.joined(separator: "\n")
                     }
@@ -33,6 +36,19 @@ class CountriesListViewModel: ObservableObject {
                     self?.errorMessage = error.localizedDescription
                 }
             }
+        }
+    }
+    
+    func filterCountries() {
+        guard !searchQuery.isEmpty else {
+            searchedCountries = countries
+            return
+        }
+        
+        withAnimation {
+            searchedCountries = countries?.filter({ country in
+                country.name.lowercased().contains(searchQuery.lowercased())
+            })
         }
     }
 }

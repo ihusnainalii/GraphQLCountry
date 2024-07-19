@@ -21,6 +21,7 @@
 		955521C32C4ABF8B005A1573 /* CountryApi in Frameworks */ = {isa = PBXBuildFile; productRef = 955521C22C4ABF8B005A1573 /* CountryApi */; };
 		955521C72C4ABFFD005A1573 /* CountriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955521C62C4ABFFD005A1573 /* CountriesListView.swift */; };
 		955521C92C4AC014005A1573 /* CountriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955521C82C4AC014005A1573 /* CountriesListViewModel.swift */; };
+		955521CB2C4ADE21005A1573 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955521CA2C4ADE21005A1573 /* CountryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		955521BF2C4ABEBD005A1573 /* Countries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Countries.graphql; sourceTree = "<group>"; };
 		955521C62C4ABFFD005A1573 /* CountriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListView.swift; sourceTree = "<group>"; };
 		955521C82C4AC014005A1573 /* CountriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListViewModel.swift; sourceTree = "<group>"; };
+		955521CA2C4ADE21005A1573 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				955521C62C4ABFFD005A1573 /* CountriesListView.swift */,
 				955521C82C4AC014005A1573 /* CountriesListViewModel.swift */,
+				955521CA2C4ADE21005A1573 /* CountryView.swift */,
 			);
 			path = CountriesListView;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				9555219B2C4A7693005A1573 /* SpecificCountryViewModel.swift in Sources */,
 				955521C72C4ABFFD005A1573 /* CountriesListView.swift in Sources */,
 				9555217D2C4A755D005A1573 /* SpecificCountryView.swift in Sources */,
+				955521CB2C4ADE21005A1573 /* CountryView.swift in Sources */,
 				955521C92C4AC014005A1573 /* CountriesListViewModel.swift in Sources */,
 				955521B12C4A8C73005A1573 /* SpecificCountryQuery.graphql in Sources */,
 				9555217B2C4A755D005A1573 /* GraphQLCountryApp.swift in Sources */,
