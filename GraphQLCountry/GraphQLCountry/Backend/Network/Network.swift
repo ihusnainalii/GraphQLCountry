@@ -2,7 +2,7 @@
 //  Network.swift
 //  GraphQLCountry
 //
-//  Created by Husnain Ali - ILI on 19/07/2024.
+//  Created by Husnain Ali on 19/07/2024.
 //
 
 import Foundation

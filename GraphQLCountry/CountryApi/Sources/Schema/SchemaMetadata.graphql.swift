@@ -22,6 +22,10 @@ public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
     switch typename {
     case "Query": return CountryApi.Objects.Query
     case "Country": return CountryApi.Objects.Country
+    case "Continent": return CountryApi.Objects.Continent
+    case "State": return CountryApi.Objects.State
+    case "Language": return CountryApi.Objects.Language
+    case "Subdivision": return CountryApi.Objects.Subdivision
     default: return nil
     }
   }

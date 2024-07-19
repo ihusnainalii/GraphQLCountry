@@ -3,7 +3,23 @@ query SpecificCountry {
         name,
         code,
         capital,
-        currencies
+        currencies,
+        continent {
+          name
+        },
+        native,
+        states {
+            name
+          code
+        },
+        languages {
+          name
+        },
+        awsRegion,
+        subdivisions {
+          name
+        },
+        phone,
         emoji
     }
 }
