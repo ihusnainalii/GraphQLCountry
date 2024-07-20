@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		952166812C4AED5C00CD34EB /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 952166802C4AED5C00CD34EB /* Apollo */; };
 		9555217B2C4A755D005A1573 /* GraphQLCountryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9555217A2C4A755D005A1573 /* GraphQLCountryApp.swift */; };
 		9555217F2C4A755E005A1573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9555217E2C4A755E005A1573 /* Assets.xcassets */; };
 		955521822C4A755E005A1573 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 955521812C4A755E005A1573 /* Preview Assets.xcassets */; };
 		955521962C4A763C005A1573 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955521952C4A763C005A1573 /* Network.swift */; };
-		955521B72C4AB2F0005A1573 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 955521B62C4AB2F0005A1573 /* Apollo */; };
-		955521B92C4AB2F0005A1573 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 955521B82C4AB2F0005A1573 /* ApolloWebSocket */; };
 		955521BB2C4ABAEC005A1573 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 955521BA2C4ABAEC005A1573 /* schema.graphqls */; };
 		955521C02C4ABEBD005A1573 /* Countries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 955521BF2C4ABEBD005A1573 /* Countries.graphql */; };
 		955521C32C4ABF8B005A1573 /* CountryApi in Frameworks */ = {isa = PBXBuildFile; productRef = 955521C22C4ABF8B005A1573 /* CountryApi */; };
@@ -39,9 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				955521B72C4AB2F0005A1573 /* Apollo in Frameworks */,
 				955521C32C4ABF8B005A1573 /* CountryApi in Frameworks */,
-				955521B92C4AB2F0005A1573 /* ApolloWebSocket in Frameworks */,
+				952166812C4AED5C00CD34EB /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,9 +159,8 @@
 			);
 			name = GraphQLCountry;
 			packageProductDependencies = (
-				955521B62C4AB2F0005A1573 /* Apollo */,
-				955521B82C4AB2F0005A1573 /* ApolloWebSocket */,
 				955521C22C4ABF8B005A1573 /* CountryApi */,
+				952166802C4AED5C00CD34EB /* Apollo */,
 			);
 			productName = GraphQLCountry;
 			productReference = 955521772C4A755D005A1573 /* GraphQLCountry.app */;
@@ -194,8 +191,8 @@
 			);
 			mainGroup = 9555216E2C4A755D005A1573;
 			packageReferences = (
-				955521B52C4AB2F0005A1573 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				955521C12C4ABF8B005A1573 /* XCLocalSwiftPackageReference "CountryApi" */,
+				9521667F2C4AED5C00CD34EB /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 955521782C4A755D005A1573 /* Products */;
 			projectDirPath = "";
@@ -442,7 +439,7 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		955521B52C4AB2F0005A1573 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+		9521667F2C4AED5C00CD34EB /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
 			requirement = {
@@ -453,15 +450,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		955521B62C4AB2F0005A1573 /* Apollo */ = {
+		952166802C4AED5C00CD34EB /* Apollo */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 955521B52C4AB2F0005A1573 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			package = 9521667F2C4AED5C00CD34EB /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
-		};
-		955521B82C4AB2F0005A1573 /* ApolloWebSocket */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 955521B52C4AB2F0005A1573 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = ApolloWebSocket;
 		};
 		955521C22C4ABF8B005A1573 /* CountryApi */ = {
 			isa = XCSwiftPackageProductDependency;
